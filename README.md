@@ -16,7 +16,7 @@ This package is inspired by: [miroc/Laravel-Adminer](https://github.com/miroc/La
  package is to keep it up-to-date with Adminer, add plugin support and a test suite (TBD).
 
 ## Plugins included
-####tables-filter
+#### tables-filter
 This plugin adds ability to do (fuzzy) search on table names. It's especially useful when you have a large set of tables 
 ![tables-filter](images/table-filter-plugin.JPG)
 
