@@ -1,0 +1,25 @@
+{
+    "name": "aranyasen/laravel-adminer",
+    "description": "Adminer (by Jakub Vrana) wrapper for Laravel 5.5+",
+    "keywords": ["adminer", "laravel5", "database", "management", "explorer"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aranya Sen",
+            "email": "sen.aranya@gmail.com",
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": ">=5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aranyasen\\LaravelAdminer\\": "src/"
+        }
+    }
+}
