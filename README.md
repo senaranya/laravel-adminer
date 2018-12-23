@@ -5,10 +5,20 @@
 </p>
 
 # Introduction
-Laravel 5 wrapper for [Adminer](https://github.com/vrana/adminer/).
+Laravel 5 wrapper for [Adminer](https://www.adminer.org).
 Adminer is a fast single-file database manager/explorer tool written by Jakub Vrana. It's a great replacement for 
 PhpMyAdmin (also supports PostgreSQL, SQLite, MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB).
-Check out the official [Adminer](https://www.adminer.org/) page more details.
+
+This package is meant to be used with Laravel as an in-built database manager/explorer. It comes with support for
+Adminer [plugins](https://www.adminer.org/en/plugins/) and themes, which super-charges an already powerful tool.
+
+This package is inspired by: [miroc/Laravel-Adminer](https://github.com/miroc/Laravel-Adminer). The reason to add this
+ package is to keep it up-to-date with Adminer, add plugin support and a test suite (TBD).
+
+## Plugins included
+####tables-filter
+This plugin adds ability to do (fuzzy) search on table names. It's especially useful when you have a large set of tables 
+![tables-filter](images/table-filter-plugin.JPG)
 
 ## Installation
 To use this package, run:
@@ -42,10 +52,12 @@ protected $except = [
 ];
 ```
 
+### To add plugins
+Adminer supports a host of [plugins](https://www.adminer.org/en/plugins/). 
+See [CONTRIBUTING](CONTRIBUTING.md) to add a new plugin
+
 ### To add a new theme:
-In `public/`:
+Download your favorite theme in `public/`, e.g.:
 ```bash
 $ wget https://raw.githubusercontent.com/vrana/adminer/master/designs/hever/adminer.css
 ```
-
-###### Package inspired by: https://github.com/miroc/Laravel-Adminer
