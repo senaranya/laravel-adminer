@@ -23,7 +23,7 @@ This plugin adds ability to do (fuzzy) search on table names. It's especially us
 ## Installation
 To use this package, run:
 ```
-composer require aranysen/laravel-adminer
+composer require aranyasen/laravel-adminer
 ```
 ### To use Adminer to Laravel routes (e.g. /adminer), update `routes/web.php`:
 
