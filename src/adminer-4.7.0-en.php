@@ -488,7 +488,7 @@ FROM pg_constraint
 WHERE conrelid = (SELECT pc.oid FROM pg_class AS pc INNER JOIN pg_namespace AS pn ON (pn.oid = pc.relnamespace) WHERE pc.relname = ".q($Q)." AND pn.nspname = current_schema())
 AND contype = 'f'::char
 ORDER BY conkey, conname")as$J){if(preg_match('~FOREIGN KEY\s*\((.+)\)\s*REFERENCES (.+)\((.+)\)(.*)$~iA',$J['definition'],$B)){$J['source']=array_map('trim',explode(',',$B[1]));if(preg_match('~^(("([^"]|"")+"|[^"]+)\.)?"?("([^"]|"")+"|[^"]+)$~',$B[2],$Be)){$J['ns']=str_replace('""','"',preg_replace('~^"(.+)"$~','\1',$Be[2]));$J['table']=str_replace('""','"',preg_replace('~^"(.+)"$~','\1',$Be[4]));}$J['target']=array_map('trim',explode(',',$B[3]));$J['on_delete']=(preg_match("~ON DELETE ($of)~",$B[4],$Be)?$Be[1]:'NO ACTION');$J['on_update']=(preg_match("~ON UPDATE ($of)~",$B[4],$Be)?$Be[1]:'NO ACTION');$I[$J['conname']]=$J;}}return$I;}function
-view($C){global$g;return
+adm_view($C){global$g;return
     array("select"=>trim($g->result("SELECT view_definition
 FROM information_schema.views
 WHERE table_schema = current_schema() AND table_name = ".q($C))));}function
@@ -657,7 +657,7 @@ FROM user_ind_columns uic
 LEFT JOIN user_constraints uc ON uic.index_name = uc.constraint_name AND uic.table_name = uc.table_name
 WHERE uic.table_name = ".q($Q)."
 ORDER BY uc.constraint_type, uic.column_position",$h)as$J){$Id=$J["INDEX_NAME"];$I[$Id]["type"]=($J["CONSTRAINT_TYPE"]=="P"?"PRIMARY":($J["CONSTRAINT_TYPE"]=="U"?"UNIQUE":"INDEX"));$I[$Id]["columns"][]=$J["COLUMN_NAME"];$I[$Id]["lengths"][]=($J["CHAR_LENGTH"]&&$J["CHAR_LENGTH"]!=$J["COLUMN_LENGTH"]?$J["CHAR_LENGTH"]:null);$I[$Id]["descs"][]=($J["DESCEND"]?'1':null);}return$I;}function
-view($C){$K=get_rows('SELECT text "select" FROM user_views WHERE view_name = '.q($C));return
+adm_view($C){$K=get_rows('SELECT text "select" FROM user_views WHERE view_name = '.q($C));return
     reset($K);}function
 collations(){return
     array();}function
@@ -812,7 +812,7 @@ FROM sys.indexes i
 INNER JOIN sys.index_columns ic ON i.object_id = ic.object_id AND i.index_id = ic.index_id
 INNER JOIN sys.columns c ON ic.object_id = c.object_id AND ic.column_id = c.column_id
 WHERE OBJECT_NAME(i.object_id) = ".q($Q),$h)as$J){$C=$J["name"];$I[$C]["type"]=($J["is_primary_key"]?"PRIMARY":($J["is_unique"]?"UNIQUE":"INDEX"));$I[$C]["lengths"]=array();$I[$C]["columns"][$J["key_ordinal"]]=$J["column_name"];$I[$C]["descs"][$J["key_ordinal"]]=($J["is_descending_key"]?'1':null);}return$I;}function
-view($C){global$g;return
+adm_view($C){global$g;return
     array("select"=>preg_replace('~^(?:[^[]|\[[^]]*])*\s+AS\s+~isU','',$g->result("SELECT VIEW_DEFINITION FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = SCHEMA_NAME() AND TABLE_NAME = ".q($C))));}function
 collations(){$I=array();foreach(get_vals("SELECT name FROM fn_helpcollations()")as$d)$I[preg_replace('~_.*~','',$d)][]=$d;return$I;}function
 information_schema($l){return
