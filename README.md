@@ -23,8 +23,10 @@ This package is inspired by: [miroc/Laravel-Adminer](https://github.com/miroc/La
 
 ![Table with 'rmsoft' theme](images/DB-Table-Theme.JPG)
 
-## Plugins included
-####tables-filter
+## Plugins Included
+
+#### Tables-filter
+
 This plugin adds ability to do (fuzzy) search on table names. It's especially useful when you have a large set of tables 
 
 ![tables-filter](images/table-filter-plugin.JPG)
