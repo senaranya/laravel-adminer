@@ -27,14 +27,14 @@ This package is inspired by: [miroc/Laravel-Adminer](https://github.com/miroc/La
 
 #### Tables-filter
 
-This plugin adds ability to do (fuzzy) search on table names. It's especially useful when you have a large set of tables 
+Adds ability to do (fuzzy) search on table names. It's especially useful when you have a large set of tables 
 
 ![tables-filter](images/table-filter-plugin.JPG)
 
 ## Installation
 To use this package, run:
 ```
-composer require aranysen/laravel-adminer
+composer require aranyasen/laravel-adminer
 ```
 ### To use Adminer to Laravel routes (e.g. /adminer), update `routes/web.php`:
 
