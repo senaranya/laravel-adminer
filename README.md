@@ -14,6 +14,8 @@ Adminer [plugins](https://www.adminer.org/en/plugins/) and themes, which super-c
 
 This package is inspired by: [miroc/Laravel-Adminer](https://github.com/miroc/Laravel-Adminer). The reason to add this
  package is to keep it up-to-date with Adminer, add plugin support and a test suite (TBD).
+![Database with default theme](images/DB-Default.JPG)
+![Table with 'rmsoft' theme](images/DB-Table-Theme.JPG)
 
 ## Plugins included
 ####tables-filter
