@@ -3,7 +3,7 @@
 
 ### To update Adminer
 * Download new adminer file
-* Prefix `_adm` to `view()`, `cookie()` and `redirect()` functions. Peferably use your IDE to do it safely.
+* Prefix `adm_` to `view()`, `cookie()` and `redirect()` functions. Preferably use your IDE to do it safely.
 
 ### To add a plugin
 * Add the required plugin inside `src/plugins/` directory

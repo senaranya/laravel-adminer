@@ -31,4 +31,4 @@ function adminer_object() {
 }
 
 // include original Adminer or Adminer Editor
-include "adminer-4.7.0-en.php";
+include "adminer-4.7.1-en.php";
