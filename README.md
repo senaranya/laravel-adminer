@@ -14,16 +14,27 @@ Adminer [plugins](https://www.adminer.org/en/plugins/) and themes, which super-c
 
 This package is inspired by: [miroc/Laravel-Adminer](https://github.com/miroc/Laravel-Adminer). The reason to add this
  package is to keep it up-to-date with Adminer, add plugin support and a test suite (TBD).
+ 
+ #### Database view with default theme
+ 
+![Database with default theme](images/DB-Default.JPG)
 
-## Plugins included
-####tables-filter
-This plugin adds ability to do (fuzzy) search on table names. It's especially useful when you have a large set of tables 
+#### Table view with 'rmsoft' theme
+
+![Table with 'rmsoft' theme](images/DB-Table-Theme.JPG)
+
+## Plugins Included
+
+#### Tables-filter
+
+Adds ability to do (fuzzy) search on table names. It's especially useful when you have a large set of tables 
+
 ![tables-filter](images/table-filter-plugin.JPG)
 
 ## Installation
 To use this package, run:
 ```
-composer require aranysen/laravel-adminer
+composer require aranyasen/laravel-adminer
 ```
 ### To use Adminer to Laravel routes (e.g. /adminer), update `routes/web.php`:
 
