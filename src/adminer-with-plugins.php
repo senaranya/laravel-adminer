@@ -1,7 +1,7 @@
 <?php
 
 function adminer_object() {
-    $curDir = dirname(__FILE__);
+    $curDir = __DIR__;
     // required to run any plugin
     include_once "{$curDir}/plugins/plugin.php";
 
@@ -31,4 +31,4 @@ function adminer_object() {
 }
 
 // include original Adminer or Adminer Editor
-include "adminer-4.7.1-en.php";
+include "adminer-4.7.3-en.php";
