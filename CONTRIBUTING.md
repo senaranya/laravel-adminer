@@ -2,7 +2,7 @@
 * Sanity test: Load `/adminer` route, verify tables, change some data etc.
 
 ### To update Adminer
-* Download new adminer file
+* [Download](https://www.adminer.org/#download) new Adminer file, English-only version.
 * Prefix `adm_` to `view()`, `cookie()` and `redirect()` functions. Preferably use your IDE to do it safely.
 * Update adminer-with-plugins.php with the new adminer filename
 

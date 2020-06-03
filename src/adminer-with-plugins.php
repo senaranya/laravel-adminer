@@ -7,7 +7,7 @@ function adminer_object() {
 
     // autoloader
     foreach (glob("{$curDir}/plugins/*.php") as $filename) {
-        include_once "$filename";
+        include_once (string) $filename;
     }
 
     $plugins = [
@@ -31,4 +31,4 @@ function adminer_object() {
 }
 
 // include original Adminer or Adminer Editor
-include "adminer-4.7.3-en.php";
+include 'adminer-4.7.6-en.php';
