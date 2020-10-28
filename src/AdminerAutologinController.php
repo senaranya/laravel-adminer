@@ -2,32 +2,30 @@
 
 namespace Aranyasen\LaravelAdminer;
 
-use Config;
+use Illuminate\Support\Facades\Config;
 
 /**
  * Autologin with current Laravel database credentials
  */
 class AdminerAutologinController extends AdminerController
 {
-
-    public function index()
+    public function index(): void
     {
         if (! isset($_GET['db'])) {
-            
-            $database_config = Config::get('database.default');
-        
-            $database_driver = Config::get("database.connections.$database_config.driver");
-            if ($database_driver === "mysql") {
-                $database_driver = "server";
+            $databaseConnection = Config::get('database.default');
+
+            $databaseDriver = Config::get("database.connections.$databaseConnection.driver");
+            if ($databaseDriver === "mysql") {
+                $databaseDriver = "server";
             }
-            
-            $_POST['auth']['driver'] = $database_driver;
-            $_POST['auth']['server'] = Config::get("database.connections.$database_config.host");
-            $_POST['auth']['db'] = Config::get("database.connections.$database_config.database");
-            $_POST['auth']['username'] = Config::get("database.connections.$database_config.username");
-            $_POST['auth']['password'] = Config::get("database.connections.$database_config.password");
+
+            $_POST['auth']['driver'] = $databaseDriver;
+            $_POST['auth']['server'] = Config::get("database.connections.$databaseConnection.host");
+            $_POST['auth']['db'] = Config::get("database.connections.$databaseConnection.database");
+            $_POST['auth']['username'] = Config::get("database.connections.$databaseConnection.username");
+            $_POST['auth']['password'] = Config::get("database.connections.$databaseConnection.password");
         }
-        
+
         parent::index();
     }
 }
