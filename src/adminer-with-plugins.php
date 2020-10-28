@@ -1,6 +1,7 @@
 <?php
 
-function adminer_object() {
+function adminer_object()
+{
     $curDir = __DIR__;
     // required to run any plugin
     include_once "{$curDir}/plugins/plugin.php";
