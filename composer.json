@@ -13,8 +13,8 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.3",
-        "illuminate/support": ">=5",
-        "illuminate/routing": ">=5"
+        "illuminate/support": ">=5.1",
+        "illuminate/routing": ">=5.1"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
