@@ -20,7 +20,8 @@ class AdminerAutologinController extends AdminerController
             }
 
             $_POST['auth']['driver'] = $databaseDriver;
-            $_POST['auth']['server'] = Config::get("database.connections.$databaseConnection.host");
+            $_POST['auth']['server'] = Config::get("database.connections.$databaseConnection.host") . ':' .
+                Config::get("database.connections.$databaseConnection.port");
             $_POST['auth']['db'] = Config::get("database.connections.$databaseConnection.database");
             $_POST['auth']['username'] = Config::get("database.connections.$databaseConnection.username");
             $_POST['auth']['password'] = Config::get("database.connections.$databaseConnection.password");
