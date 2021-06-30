@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 function adminer_object()
 {
     $curDir = __DIR__;
@@ -32,4 +34,4 @@ function adminer_object()
 }
 
 // include original Adminer or Adminer Editor
-include 'adminer-4.7.8-en.php';
+include 'adminer-4.8.1-en.php';
