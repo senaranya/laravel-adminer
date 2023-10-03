@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
+use Aranyasen\LaravelAdminer\AdminerAutologinController;
+use Illuminate\Support\Facades\Route;
+use Orchestra\Testbench\TestCase;
 
 class AdminerTest extends TestCase
 {
@@ -14,4 +16,18 @@ class AdminerTest extends TestCase
     // remove the new table, assert if it doesn't show
     // Add a table, column, data using adminer
     // Test cookie
+
+    /**
+     * @test
+     */
+    public function does_adminer_route_load_properly(): void
+    {
+        self::markTestIncomplete("Test fails with session error. Need to be fixed");
+        Route::any('adminer', [AdminerAutologinController::class, 'index']);
+
+        $this
+            // ->startSession()
+            ->get('adminer')
+            ->assertOk();
+    }
 }
