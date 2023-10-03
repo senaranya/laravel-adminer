@@ -5,7 +5,7 @@
 </p>
 
 # Introduction
-Laravel 5 wrapper for [Adminer](https://www.adminer.org).
+Laravel 9+ wrapper for [Adminer](https://www.adminer.org).
 Adminer is a fast single-file database manager/explorer tool written by Jakub Vrana. It's a great replacement for 
 PhpMyAdmin (also supports PostgreSQL, SQLite, MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB).
 
