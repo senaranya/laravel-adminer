@@ -4,6 +4,11 @@
 <a href="https://packagist.org/packages/aranyasen/laravel-adminer"><img src="https://poser.pugx.org/aranyasen/laravel-adminer/license" alt="License"></a>
 </p>
 
+# ⚠️ DEPRECATED / UNMAINTAINED
+
+This repository is **no longer maintained**. 
+As an alternative, consider [onecentlin/laravel-adminer](https://github.com/onecentlin/laravel-adminer) instead.
+
 # Introduction
 Laravel 9+ wrapper for [Adminer](https://www.adminer.org).
 Adminer is a fast single-file database manager/explorer tool written by Jakub Vrana. It's a great replacement for 
